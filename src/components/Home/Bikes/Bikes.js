@@ -13,8 +13,8 @@ const Bikes = () => {
     },[])
     return (
         <div>
-            <h2>Bikes</h2>
-            <div className='container grid grid-cols-3 gap-4'>
+            <h2 className='text-3xl text-red-600 my-3'>Bikes</h2>
+            <div className='container grid lg:grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1'>
             {
                 bikes.map(bike=><Bike key={bike._id} bike={bike}/>)
             }
