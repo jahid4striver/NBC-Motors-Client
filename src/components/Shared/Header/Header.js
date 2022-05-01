@@ -5,7 +5,7 @@ import honda from '../../../images/honda.png'
 const Header = () => {
     return (
 
-        <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-lg">
             <div className="container-fluid">
                 <img className='h-10' src={honda} alt="" />
                 <Link className="navbar-brand text-danger fw-bolder" to="/">NBC Motors</Link>
@@ -18,7 +18,7 @@ const Header = () => {
                             <Link className="nav-link active text-danger" aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-danger" to="/">Features</Link>
+                            <Link className="nav-link text-danger" to="/bikes">Bikes</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link text-danger" to="/">Pricing</Link>

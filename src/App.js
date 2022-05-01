@@ -1,6 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Bikes from './components/Home/Bikes/Bikes';
 import Home from './components/Home/Home/Home';
+import UpdateProducts from './components/Pages/UpdateProducts/UpdateProducts';
 import Header from './components/Shared/Header/Header';
 
 function App() {
@@ -9,6 +11,8 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
+        <Route path='/bikes' element={<Bikes/>}></Route>
+        <Route path='/bikes/:id' element={<UpdateProducts/>}></Route>
       </Routes>
     </div>
   );
