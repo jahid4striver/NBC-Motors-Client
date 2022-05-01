@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Bikes from './components/Home/Bikes/Bikes';
 import Home from './components/Home/Home/Home';
@@ -14,6 +15,7 @@ function App() {
         <Route path='/bikes' element={<Bikes/>}></Route>
         <Route path='/bikes/:id' element={<UpdateProducts/>}></Route>
       </Routes>
+      <ToastContainer/>
     </div>
   );
 }
