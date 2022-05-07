@@ -1,6 +1,6 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 // import { toast } from 'react-toastify';
 import auth from '../../../Firebase/firebase.init';
@@ -8,6 +8,8 @@ import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 
 const Register = () => {
     const [createUserWithEmailAndPassword,user,loading,error,] = useCreateUserWithEmailAndPassword(auth);
+    const navigate= useNavigate();
+
 
     const handleUserRegister = (e) => {
         e.preventDefault();
@@ -19,7 +21,7 @@ const Register = () => {
         if(password === conPassword){
             createUserWithEmailAndPassword(email, password);
         }
-        e.target.reset();
+       navigate('/');
 
         
     }

@@ -7,6 +7,7 @@ import Login from './components/Pages/Login/Login';
 import Register from './components/Pages/Register/Register';
 import UpdateProducts from './components/Pages/UpdateProducts/UpdateProducts';
 import Header from './components/Shared/Header/Header';
+import ProtectedRoute from './components/Shared/ProtectedRoute/ProtectedRoute';
 
 function App() {
   return (
@@ -15,7 +16,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/bikes' element={<Bikes/>}></Route>
-        <Route path='/bikes/:id' element={<UpdateProducts/>}></Route>
+        <Route path='/bikes/:id' element={
+          <ProtectedRoute>
+            <UpdateProducts/>
+          </ProtectedRoute>
+        }></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/register' element={<Register/>}></Route>
       </Routes>

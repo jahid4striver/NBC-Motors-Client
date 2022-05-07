@@ -1,19 +1,29 @@
 import React from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import {useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase/firebase.init';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
-    const [signInWithEmailAndPassword,user,loading,error] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
     const handleLogin = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        
+
         signInWithEmailAndPassword(email, password);
     }
+
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+
 
     return (
         <div>
