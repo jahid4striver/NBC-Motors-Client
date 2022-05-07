@@ -4,6 +4,7 @@ import './App.css';
 import Bikes from './components/Home/Bikes/Bikes';
 import Home from './components/Home/Home/Home';
 import Login from './components/Pages/Login/Login';
+import ManageInventories from './components/Pages/ManageInventories/ManageInventories';
 import Register from './components/Pages/Register/Register';
 import UpdateProducts from './components/Pages/UpdateProducts/UpdateProducts';
 import Header from './components/Shared/Header/Header';
@@ -14,17 +15,21 @@ function App() {
     <div className="App">
       <Header></Header>
       <Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/bikes' element={<Bikes/>}></Route>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/bikes' element={<Bikes />}></Route>
         <Route path='/bikes/:id' element={
           <ProtectedRoute>
-            <UpdateProducts/>
+            <UpdateProducts />
           </ProtectedRoute>
         }></Route>
-        <Route path='/login' element={<Login/>}></Route>
-        <Route path='/register' element={<Register/>}></Route>
+        <Route path='/manageinventory' element={
+          <ProtectedRoute>
+            <ManageInventories/>
+          </ProtectedRoute>}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
       </Routes>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }
