@@ -10,6 +10,7 @@ import Login from './components/Pages/Login/Login';
 import ManageInventories from './components/Pages/ManageInventories/ManageInventories';
 import Register from './components/Pages/Register/Register';
 import UpdateProducts from './components/Pages/UpdateProducts/UpdateProducts';
+import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import ProtectedRoute from './components/Shared/ProtectedRoute/ProtectedRoute';
 
@@ -41,6 +42,7 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
       </Routes>
+      <Footer></Footer>
       <ToastContainer />
     </div>
   );
