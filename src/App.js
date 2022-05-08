@@ -4,6 +4,8 @@ import './App.css';
 import Bikes from './components/Home/Bikes/Bikes';
 import Home from './components/Home/Home/Home';
 import AddItem from './components/Pages/AddItem/AddItem';
+import AddSales from './components/Pages/AddSales/AddSales';
+import AllSales from './components/Pages/AllSales/AllSales';
 import Login from './components/Pages/Login/Login';
 import ManageInventories from './components/Pages/ManageInventories/ManageInventories';
 import Register from './components/Pages/Register/Register';
@@ -31,6 +33,11 @@ function App() {
           <ProtectedRoute>
             <AddItem/>
           </ProtectedRoute>}></Route>
+        <Route path='/addsales' element={
+          <ProtectedRoute>
+            <AddSales/>
+          </ProtectedRoute>}></Route>
+          <Route path='/allsales' element={<AllSales/>}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
       </Routes>

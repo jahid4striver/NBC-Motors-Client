@@ -8,16 +8,17 @@ const UpdateProducts = () => {
     const [bike, setBike] = useState([]);
     const [updatedQyt, setUpdatedQyt] = useState([]);
 
+
     useEffect(() => {
         fetch(`https://nbc-motors.herokuapp.com/bikes/${id}`)
             .then(res => res.json())
             .then(data => setBike(data.data))
-    }, [updatedQyt])
+    }, [id, bike, updatedQyt])
 
     const handleUpdateQyt = (id) => {
 
         if (bike.quantity > 0) {
-            fetch(`http://localhost:5000/bikes/${id}`, {
+            fetch(`https://nbc-motors.herokuapp.com/bikes/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -36,9 +37,10 @@ const UpdateProducts = () => {
     const handleAddQyt = (e) => {
         e.preventDefault();
         // console.log(id);
-        const addField = e.target.add.value;
+        const addField = parseInt(e.target.add.value);
+        console.log();
         console.log(addField);
-        const url= `http://localhost:5000/bikes/${id}`;
+        const url= `https://nbc-motors.herokuapp.com/bikes/${id}`;
         console.log(url);
         fetch(url, {
             method: 'PUT',
@@ -46,11 +48,12 @@ const UpdateProducts = () => {
                 'content-type': 'application.json'
             },
             body: JSON.stringify({
-                quantity: updatedQyt + parseInt(addField)
+                quantity: parseInt(bike.quantity) + addField
             }),
         })
         .then(res => res.json())
-        .then(data => console.log(data.data))
+        .then(data => {setUpdatedQyt(data.data)
+        })
     }
 
     return (

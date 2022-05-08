@@ -25,11 +25,23 @@ const handleSignOut=()=>{
                             <Link className="nav-link active text-danger" aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-danger" to="/bikes">Bikes</Link>
+                            <Link className="nav-link active text-danger" aria-current="page" to="/allsales">Recent Sales</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link text-danger" to="/">Pricing</Link>
-                        </li>
+                        {
+                            user? <li className="nav-item">
+                            <Link className="nav-link text-danger" to="/manageinventory">Manage Bikes</Link>
+                        </li>:''
+                        }
+                        {
+                            user? <li className="nav-item">
+                            <Link className="nav-link text-danger" to="/additem">Add Bike</Link>
+                        </li> : ''
+                        }
+                        {
+                            user? <li className="nav-item">
+                            <Link className="nav-link text-danger" to="/addsales">Add Sales</Link>
+                        </li> : ''
+                        }
                         {
                             user ? <li className="nav-item">
                                 <Link onClick={handleSignOut} className="nav-link text-danger" to="">Sign Out</Link>

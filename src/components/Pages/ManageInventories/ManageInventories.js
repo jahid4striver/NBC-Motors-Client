@@ -10,7 +10,7 @@ const ManageInventories = () => {
         fetch('https://nbc-motors.herokuapp.com/bikes')
         .then(res=> res.json())
         .then(data=>setBikes(data.data))
-    },[])
+    },[bikes])
     return (
         <div>
             <h1 className='text-2xl my-5 text-red-600'>Total Bikes: {bikes.length}</h1>
