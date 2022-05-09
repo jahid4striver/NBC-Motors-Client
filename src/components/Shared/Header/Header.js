@@ -30,6 +30,9 @@ const handleSignOut=()=>{
                         <li className="nav-item">
                             <Link className="nav-link active text-danger" aria-current="page" to="/requirements">Requirements</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link active text-danger" aria-current="page" to="/blogs">Blogs</Link>
+                        </li>
                         {
                             user? <li className="nav-item">
                             <Link className="nav-link text-danger" to="/manageinventory">Manage Bikes</Link>

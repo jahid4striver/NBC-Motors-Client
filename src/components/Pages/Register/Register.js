@@ -1,12 +1,15 @@
 import React from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../Firebase/firebase.init';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import '../../Home/Bikes/Bikes.css'
 
 const Register = () => {
     const [createUserWithEmailAndPassword,user,loading,error,] = useCreateUserWithEmailAndPassword(auth);
+    const [sendEmailVerification, sending] = useSendEmailVerification(auth);
+
     const navigate= useNavigate();
 
 
@@ -21,13 +24,17 @@ const Register = () => {
             createUserWithEmailAndPassword(email, password);
             toast('Registration Successful')
         }
+        if(user){
+            sendEmailVerification();
+        }
+
        navigate('/');
 
         
     }
     return (
         <div>
-            <h2 className='text-2xl my-3 text-red-600'>Please Register</h2>
+            <h2 className='text-2xl my-3 text-red-600 head-title'>Please Register</h2>
             <div className='w-75 max-w-lg mx-auto'>
                 <form onSubmit={handleUserRegister}>
                     <div className="mb-4">

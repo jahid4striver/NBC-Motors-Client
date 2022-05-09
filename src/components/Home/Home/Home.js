@@ -1,4 +1,5 @@
 import React from 'react';
+import { Spinner } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
 import Bikes from '../Bikes/Bikes';
 import Inquiry from '../Inquiry/Inquiry';

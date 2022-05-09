@@ -6,6 +6,7 @@ import Home from './components/Home/Home/Home';
 import AddItem from './components/Pages/AddItem/AddItem';
 import AddSales from './components/Pages/AddSales/AddSales';
 import AllSales from './components/Pages/AllSales/AllSales';
+import Blogs from './components/Pages/Blogs/Blogs';
 import Login from './components/Pages/Login/Login';
 import ManageInventories from './components/Pages/ManageInventories/ManageInventories';
 import NotFound from './components/Pages/NotFound/NotFound';
@@ -42,6 +43,7 @@ function App() {
           </ProtectedRoute>}></Route>
         <Route path='/allsales' element={<AllSales />}></Route>
         <Route path='/requirements' element={<Requirements />}></Route>
+        <Route path='/blogs' element={<Blogs/>}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
         <Route path='*' element={<NotFound/>}></Route>
