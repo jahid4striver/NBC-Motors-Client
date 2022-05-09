@@ -1,5 +1,6 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import '../../Home/Bikes/Bikes.css'
 
 const AddItem = () => {
 
@@ -32,7 +33,7 @@ fetch('https://nbc-motors.herokuapp.com/bikes', {
 }
     return (
         <div>
-            <h1 className='text-2xl my-5 text-red-600'>Add a New Item</h1>
+            <h1 className='text-2xl my-5 text-red-600 head-title'>Add a New Bike</h1>
             <div className='w-75 max-w-lg mx-auto'>
                 <form onSubmit={handleAddItem}>
                     <div className="mb-4">
