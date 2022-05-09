@@ -8,6 +8,7 @@ import AddSales from './components/Pages/AddSales/AddSales';
 import AllSales from './components/Pages/AllSales/AllSales';
 import Login from './components/Pages/Login/Login';
 import ManageInventories from './components/Pages/ManageInventories/ManageInventories';
+import NotFound from './components/Pages/NotFound/NotFound';
 import Register from './components/Pages/Register/Register';
 import Requirements from './components/Pages/Requirements/Requirements';
 import UpdateProducts from './components/Pages/UpdateProducts/UpdateProducts';
@@ -29,20 +30,21 @@ function App() {
         }></Route>
         <Route path='/manageinventory' element={
           <ProtectedRoute>
-            <ManageInventories/>
+            <ManageInventories />
           </ProtectedRoute>}></Route>
         <Route path='/additem' element={
           <ProtectedRoute>
-            <AddItem/>
+            <AddItem />
           </ProtectedRoute>}></Route>
         <Route path='/addsales' element={
           <ProtectedRoute>
-            <AddSales/>
+            <AddSales />
           </ProtectedRoute>}></Route>
-          <Route path='/allsales' element={<AllSales/>}></Route>
-          <Route path='/requirements' element={<Requirements/>}></Route>
+        <Route path='/allsales' element={<AllSales />}></Route>
+        <Route path='/requirements' element={<Requirements />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
+        <Route path='*' element={<NotFound/>}></Route>
       </Routes>
       <Footer></Footer>
       <ToastContainer />
