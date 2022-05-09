@@ -2,7 +2,6 @@ import React from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-// import { toast } from 'react-toastify';
 import auth from '../../../Firebase/firebase.init';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 
@@ -20,6 +19,7 @@ const Register = () => {
 
         if(password === conPassword){
             createUserWithEmailAndPassword(email, password);
+            toast('Registration Successful')
         }
        navigate('/');
 
@@ -45,7 +45,7 @@ const Register = () => {
                     <button type="submit" className="my-3 text-white bg-red-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register</button>
                 </form>
             </div>
-            <p>Already Have a Account? <Link className='text-red-600' to='/login'>Login</Link></p>
+            <p className='my-2'>Already Have a Account? <Link className='text-red-600' to='/login'>Login</Link></p>
             <SocialLogin></SocialLogin>
         </div>
     );
