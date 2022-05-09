@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBiWU9XbeDSY27HTVSENMuucZw7hC345cE",
-  authDomain: "nbc-motors-inventory.firebaseapp.com",
-  projectId: "nbc-motors-inventory",
-  storageBucket: "nbc-motors-inventory.appspot.com",
-  messagingSenderId: "832260037360",
-  appId: "1:832260037360:web:b9885b6496c06593ef8035"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase

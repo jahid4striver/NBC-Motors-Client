@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import auth from '../../../Firebase/firebase.init';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import '../../Home/Bikes/Bikes.css'
+import Loading from '../../Shared/Loading/Loading';
 
 const Register = () => {
     const [createUserWithEmailAndPassword,user,loading,error,] = useCreateUserWithEmailAndPassword(auth);
@@ -26,6 +27,9 @@ const Register = () => {
         }
         if(user){
             sendEmailVerification();
+        }
+        if(loading){
+            return <Loading></Loading>
         }
 
        navigate('/');
