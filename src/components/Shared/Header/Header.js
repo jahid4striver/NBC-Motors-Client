@@ -40,6 +40,11 @@ const handleSignOut=()=>{
                         }
                         {
                             user? <li className="nav-item">
+                            <Link className="nav-link text-white" to="/myitems">My Items</Link>
+                        </li>:''
+                        }
+                        {
+                            user? <li className="nav-item">
                             <Link className="nav-link text-white" to="/additem">Add Bike</Link>
                         </li> : ''
                         }

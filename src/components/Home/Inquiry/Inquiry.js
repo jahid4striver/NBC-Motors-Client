@@ -1,5 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import '../../Home/Bikes/Bikes.css'
+
 
 const Inquiry = () => {
 
@@ -31,7 +33,7 @@ fetch('https://nbc-motors.herokuapp.com/inquiry', {
 }
     return (
         <div>
-            <h1 className='text-2xl my-5 text-red-600'>What's Your Requirement?</h1>
+            <h1 className='text-2xl my-5 text-red-600 head-title'>What's Your Requirement?</h1>
             <div className='w-75 max-w-lg mx-auto'>
                 <form onSubmit={handleAddInquiry}>
                     <div className="mb-4">
