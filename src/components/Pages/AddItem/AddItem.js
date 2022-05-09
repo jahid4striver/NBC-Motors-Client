@@ -28,7 +28,7 @@ fetch('https://nbc-motors.herokuapp.com/bikes', {
     toast('Bike Added Successful')
     console.log(data)
   });
-  e.target.reset();
+//   e.target.reset();
 }
     return (
         <div>

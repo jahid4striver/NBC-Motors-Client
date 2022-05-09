@@ -11,25 +11,13 @@ const Banner = () => {
             </div>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                    <img src="https://www.bdhonda.com/assets/public/images/home-banner/qI9xQHzeNv6FjnE.jpg" className="d-block w-100" alt="..."/>
-                        <div className="carousel-caption d-none d-md-block banner-header">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
+                    <img src="https://www.bdhonda.com/assets/public/images/home-banner/qI9xQHzeNv6FjnE.jpg" className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://www.bdhonda.com/assets/public/images/home-banner/TSuBuoJ25tTaBZz.jpeg" className="d-block w-100" alt="..."/>
-                        <div className="carousel-caption d-none d-md-block banner-header">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
+                    <img src="https://www.bdhonda.com/assets/public/images/home-banner/TSuBuoJ25tTaBZz.jpeg" className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://www.bdhonda.com/assets/public/images/home-banner/f76VfWQKN12O6Cl.png" className="d-block w-100" alt="..."/>
-                        <div  className="carousel-caption d-none d-md-block banner-header">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
+                    <img src="https://www.bdhonda.com/assets/public/images/home-banner/f76VfWQKN12O6Cl.png" className="d-block w-100" alt="..." />
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">

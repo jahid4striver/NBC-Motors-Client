@@ -18,7 +18,7 @@ const Bikes = () => {
             <h2 className='text-3xl text-red-600 my-3 head-title'>Our Bikes</h2>
             <div className='container grid lg:grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1'>
                 {
-                    bikes.slice(0, 5).map(bike => <Bike key={bike._id} bike={bike} />)
+                    bikes.slice(0, 6).map(bike => <Bike key={bike._id} bike={bike} />)
                 }
             </div>
             <div className='my-6 container text-right'>
