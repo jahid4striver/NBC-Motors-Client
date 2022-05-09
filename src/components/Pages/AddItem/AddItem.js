@@ -28,11 +28,12 @@ fetch('https://nbc-motors.herokuapp.com/bikes', {
     toast('Bike Added Successful')
     console.log(data)
   });
+  e.target.reset();
 }
     return (
         <div>
             <h1 className='text-2xl my-5 text-red-600'>Add a New Item</h1>
-            <div className='w-50 mx-auto'>
+            <div className='w-75 max-w-lg mx-auto'>
                 <form onSubmit={handleAddItem}>
                     <div className="mb-4">
                         <label for="name" className="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bike Model</label>

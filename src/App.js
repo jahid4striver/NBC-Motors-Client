@@ -9,6 +9,7 @@ import AllSales from './components/Pages/AllSales/AllSales';
 import Login from './components/Pages/Login/Login';
 import ManageInventories from './components/Pages/ManageInventories/ManageInventories';
 import Register from './components/Pages/Register/Register';
+import Requirements from './components/Pages/Requirements/Requirements';
 import UpdateProducts from './components/Pages/UpdateProducts/UpdateProducts';
 import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
@@ -39,6 +40,7 @@ function App() {
             <AddSales/>
           </ProtectedRoute>}></Route>
           <Route path='/allsales' element={<AllSales/>}></Route>
+          <Route path='/requirements' element={<Requirements/>}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
       </Routes>

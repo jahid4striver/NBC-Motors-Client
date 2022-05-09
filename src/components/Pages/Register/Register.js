@@ -28,7 +28,7 @@ const Register = () => {
     return (
         <div>
             <h2 className='text-2xl my-3 text-red-600'>Please Register</h2>
-            <div className='w-50 mx-auto'>
+            <div className='w-75 max-w-lg mx-auto'>
                 <form onSubmit={handleUserRegister}>
                     <div className="mb-4">
                         <label for="email" className="text-left block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Email</label>
