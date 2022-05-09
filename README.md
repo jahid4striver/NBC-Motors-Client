@@ -22,8 +22,9 @@ Live Site Link: https://nbc-motors-inventory.web.app/
 
 * React
 * React-Router
+* Tailwind CSS
+* Tailwind Components
 * React-Bootstrap
-* Vanilla Bootstrap
 * Vanilla CSS
 * Firebase Authentication
 * React Firebase Hook
